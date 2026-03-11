@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Free Blood Alcohol Concentration (BAC) Calculator Online</title>
+    <meta name="description" content="Free blood alcohol concentration (BAC) calculator. Estimate your BAC level based on drinks, weight, time and gender. Learn about alcohol metabolism and safe driving limits.">
+    <meta name="keywords" content="blood alcohol calculator, BAC calculator, bac level calculator, blood alcohol concentration, alcohol impairment">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Free Blood Alcohol Concentration (BAC) Calculator Online">
+    <meta property="og:description" content="Free blood alcohol concentration (BAC) calculator. Estimate your BAC level based on drinks, weight, time and gender. Learn about alcohol metabolism and safe driving limits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baclevelcalculator.com">
+    <meta property="og:image" content="https://baclevelcalculator.com/logo1.jpg">
+    <link rel="canonical" href="https://baclevelcalculator.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://baclevelcalculator.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://baclevelcalculator.com/apple-touch-icon.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --border-radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.75rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .logo-icon {
+            font-size: 2.2rem;
+            margin-right: 0.75rem;
+        }
+        
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 1.25rem;
+        }
+        
+        .quick-nav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+        
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 992px) {
+            .calculator-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .calculator-container {
+                gap: 1.25rem;
+            }
+        }
+        
+        .calculator-card, .results-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.75rem;
+            height: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .calculator-card, .results-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .calculator-card, .results-card {
+                padding: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .calculator-card, .results-card {
+                padding: 1rem;
+            }
+        }
+        
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .card-title i {
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        /* Input Section */
+        .input-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        @media (max-width: 480px) {
+            .input-group {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .input-group label {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 480px) {
+            .input-row {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+        
+        .input-row .input-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        .unit-selector {
+            display: flex;
+            background-color: var(--gray-light);
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+        
+        .unit-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            background: transparent;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            .unit-btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .unit-btn.active {
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        @media (max-width: 480px) {
+            input, select {
+                padding: 0.65rem 0.85rem;
+                font-size: 0.95rem;
+            }
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .drink-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        @media (max-width: 480px) {
+            .drink-item {
+                padding: 0.85rem;
+                margin-bottom: 0.85rem;
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .drink-item {
+                padding: 0.75rem;
+            }
+        }
+        
+        .drink-icon {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            width: 36px;
+            text-align: center;
+        }
+        
+        @media (max-width: 480px) {
+            .drink-icon {
+                font-size: 1.3rem;
+                margin-right: 0.75rem;
+                width: 32px;
+            }
+        }
+        
+        .drink-details {
+            flex: 1;
+            min-width: 0; 
+        }
+        
+        .drink-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .drink-name {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .drink-info {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 480px) {
+            .drink-info {
+                font-size: 0.8rem;
+            }
+        }
+        
+        .drink-controls {
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (max-width: 480px) {
+            .drink-controls {
+                width: 100%;
+                justify-content: center;
+                margin-top: 0.75rem;
+                order: 3;
+            }
+        }
+        
+        
+        .drink-quantity-input {
+            width: 70px;
+            padding: 0.5rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+        
+        .drink-quantity-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        @media (max-width: 480px) {
+            .drink-quantity-input {
+                width: 60px;
+                padding: 0.4rem;
+                margin-left: 0;
+            }
+        }
+        
+        .add-drink-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: transparent;
+            border: 2px dashed var(--gray-light);
+            border-radius: 8px;
+            color: var(--primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .add-drink-btn:hover {
+            border-color: var(--primary);
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+        
+        .add-drink-btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 480px) {
+            .calculate-btn {
+                padding: 0.85rem;
+                font-size: 1rem;
+                margin-top: 1.25rem;
+            }
+        }
+        
+        .calculate-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+        }
+        
+        .calculate-btn i {
+            margin-right: 0.75rem;
+        }
+        
+        /* Results Section */
+        .bac-result {
+            text-align: center;
+            padding: 1.75rem 0;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: var(--border-radius);
+        }
+        
+        @media (max-width: 480px) {
+            .bac-result {
+                padding: 1.5rem 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        .bac-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            word-break: break-word;
+        }
+        
+        @media (max-width: 768px) {
+            .bac-value {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bac-value {
+                font-size: 2.75rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .bac-value {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .bac-level {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        
+        @media (max-width: 480px) {
+            .bac-level {
+                font-size: 1.15rem;
+                padding: 0.4rem 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+        }
+        
+        .level-sober {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #065f46;
+        }
+        
+        .level-low {
+            background-color: rgba(245, 158, 11, 0.2);
+            color: #92400e;
+        }
+        
+        .level-medium {
+            background-color: rgba(249, 115, 22, 0.2);
+            color: #9a3412;
+        }
+        
+        .level-high {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #991b1b;
+        }
+        
+        .result-text {
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            padding: 0 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .result-text {
+                font-size: 0.95rem;
+                margin-bottom: 1.25rem;
+                padding: 0 0.75rem;
+            }
+        }
+        
+        .legal-limits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-limits {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .legal-limits {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+        }
+        
+        .limit-card {
+            padding: 1.25rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 480px) {
+            .limit-card {
+                padding: 1rem;
+            }
+        }
+        
+        .limit-card.safe {
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .limit-card.caution {
+            background-color: rgba(245, 158, 11, 0.1);
+            border: 2px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .limit-card.illegal {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .limit-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .limit-title {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .limit-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 480px) {
+            .limit-value {
+                font-size: 1.3rem;
+            }
+        }
+        
+        .limit-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        /* Custom Drink Inputs */
+        .custom-drink-inputs {
+            margin-top: 0.5rem;
+        }
+        
+        .custom-input-row {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 480px) {
+            .custom-input-row {
+                gap: 0.75rem;
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        .custom-input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .custom-input-group label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: var(--dark);
+        }
+        
+        .custom-input-group input, .custom-input-group select {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        /* How-to-Use Section */
+        .how-to-use-section {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        @media (max-width: 768px) {
+            .how-to-use-section {
+                margin: 2.5rem 0;
+                padding: 1.75rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .how-to-use-section {
+                margin: 2rem 0;
+                padding: 1.5rem 0;
+            }
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        .how-to-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 480px) {
+            .how-to-steps {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        .step-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        @media (max-width: 768px) {
+            .step-card {
+                padding: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .step-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .step-number {
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                font-size: 1.1rem;
+                margin-bottom: 0.85rem;
+            }
+        }
+        
+        .step-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        @media (max-width: 480px) {
+            .step-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        .step-desc {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 480px) {
+            .step-desc {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 480px) {
+            .faq-section {
+                margin: 2.5rem 0;
+            }
+        }
+        
+        .faq-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .faq-container {
+                padding: 1.5rem;
+            }
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+            padding-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 480px) {
+            .faq-item {
+                margin-bottom: 1.25rem;
+                padding-bottom: 1.25rem;
+            }
+        }
+        
+        .faq-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 480px) {
+            .faq-question {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        .faq-question i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+        
+        .faq-answer {
+            color: var(--gray);
+            line-height: 1.6;
+            padding-left: 2rem;
+        }
+        
+        @media (max-width: 480px) {
+            .faq-answer {
+                padding-left: 1.75rem;
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Info Sections */
+        .info-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .info-sections {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .info-sections {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                margin-top: 2.5rem;
+            }
+        }
+        
+        .info-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .info-card {
+                padding: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .info-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        .info-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (max-width: 480px) {
+            .info-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.85rem;
+            }
+        }
+        
+        .info-card h3 i {
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .info-card ul {
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .info-card li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 480px) {
+            .info-card li {
+                font-size: 0.95rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+        
+        .disclaimer {
+            background-color: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid var(--danger);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 480px) {
+            .disclaimer {
+                padding: 1.25rem;
+                margin-top: 1.75rem;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 480px) {
+            footer {
+                padding: 2.5rem 0 1.75rem;
+                margin-top: 2.5rem;
+            }
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 1.75rem;
+            }
+        }
+        
+        .footer-section h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-section h4 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links li {
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            .copyright {
+                padding-top: 1.75rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Animation for results */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 480px) {
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* BAC Chart Section Styles */
+        .bac-chart-section {
+            margin: 3rem 0;
+            padding: 2.5rem 0;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        @media (max-width: 768px) {
+            .bac-chart-section {
+                margin: 2.5rem 0;
+                padding: 2rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bac-chart-section {
+                margin: 2rem 0;
+                padding: 1.75rem 0;
+            }
+        }
+        
+        .chart-container {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .chart-container {
+                margin-top: 1.5rem;
+            }
+        }
+        
+        .chart-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+        }
+        
+        .chart-caption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-style: italic;
+            text-align: center;
+        }
+        
+        @media (max-width: 480px) {
+            .chart-caption {
+                font-size: 0.85rem;
+                margin-top: 0.75rem;
+            }
+        }
+    </style>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://baclevelcalculator.com/#website",
+            "url": "https://baclevelcalculator.com",
+            "name": "BAC Calculator",
+            "description": "Free online Blood Alcohol Concentration (BAC) calculator. Estimate your BAC level based on drinks consumed, body weight, time elapsed and gender.",
+            "inLanguage": "en-US",
+            "publisher": {
+                "@id": "https://baclevelcalculator.com/#organization"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://baclevelcalculator.com/#webpage",
+            "url": "https://baclevelcalculator.com",
+            "name": "Free Blood Alcohol Concentration (BAC) Calculator Online",
+            "description": "Free blood alcohol concentration (BAC) calculator. Estimate your BAC level based on drinks, weight, time and gender. Learn about alcohol metabolism and safe driving limits.",
+            "isPartOf": {
+                "@id": "https://baclevelcalculator.com/#website"
+            },
+            "about": {
+                "@type": "Thing",
+                "name": "Blood Alcohol Concentration Calculator"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://baclevelcalculator.com/logo1.jpg"
+            },
+            "datePublished": "2026-02-05",
+            "dateModified": "2026-02-05",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://baclevelcalculator.com/#organization",
+            "name": "BAC Calculator",
+            "url": "https://baclevelcalculator.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://baclevelcalculator.com/logo1.jpg",
+                "width": "512",
+                "height": "512"
+            }
+        },
+        {
+            "@type": "WebApplication",
+            "name": "Blood Alcohol Concentration (BAC) Calculator",
+            "url": "https://baclevelcalculator.com",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Any",
+            "description": "Free online tool to calculate blood alcohol concentration (BAC) based on drinks consumed, body weight, time elapsed and gender.",
+            "featureList": [
+                "BAC calculation using Widmark formula",
+                "Standard drink database",
+                "Custom drink options",
+                "Legal limit information",
+                "Metabolism time estimation",
+                "Responsive design for all devices"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "BAC Calculator",
+                "url": "https://baclevelcalculator.com"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is blood alcohol concentration (BAC)?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Blood Alcohol Concentration, abbreviated as BAC, refers to the measured alcohol content in human blood, typically expressed as a percentage (e.g., 0.08%). This indicates the number of milligrams of alcohol present per 100 milliliters of blood. It serves as the internationally recognized standard for assessing alcohol levels within the body."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How accurate is this BAC calculator?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our BAC calculator provides scientific estimates based on widely accepted formulas and average metabolic rates. However, it is not entirely accurate. The blood alcohol concentration values it calculates are merely estimates, with potential errors reaching approximately 20%. Individuals metabolize alcohol at different rates, and alcohol consumption varies depending on food intake during drinking."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What counts as one standard drink?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "In the United States, a standard drink contains approximately 14 grams of pure alcohol. This is equivalent to: 12 ounces of regular beer (5% alcohol by volume), 5 ounces of wine (12% alcohol by volume), or 1.5 ounces of distilled spirits (40% alcohol by volume)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does alcohol stay in your system?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The average rate at which alcohol is metabolized in the human body is 0.015% blood alcohol concentration (BAC) per hour. In other words, it takes approximately one hour to fully metabolize one standard drink. This metabolic rate should be understood as a general average. Actual rates vary among individuals."
+                    }
+                }
+            ]
+        }
+    ]
+}
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h1>BAC Calculator</h1>
+                </div>
+                <p class="tagline">Calculate your estimated Blood Alcohol Concentration (BAC) based on drinks consumed, body weight, time elapsed, and gender. Understand your impairment level and time to zero BAC. For informational purposes only; not intended as a basis for driving decisions.</p>
+                
+                <div class="quick-nav">
+                    <a href="#how-to-use" class="nav-link">
+                        <i class="fas fa-question-circle"></i> How to Use
+                    </a>
+                    <a href="#calculator" class="nav-link">
+                        <i class="fas fa-calculator"></i> Calculator
+                    </a>
+                    <a href="#faq" class="nav-link">
+                        <i class="fas fa-comments"></i> FAQ
+                    </a>
+                    <a href="https://baclevelcalculator.com/blood-alcohol-level-chart/" class="nav-link">
+                        <i class="fas fa-chart-bar"></i> BAC Level
+                    </a>
+					<a href="https://baclevelcalculator.com/legal-blood-alcohol-level/" class="nav-link">
+						<i class="fas fa-gavel"></i> Bac Legal
+					</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="calculator-container" id="calculator">
+            <div class="calculator-card">
+                <h2 class="card-title"><i class="fas fa-calculator"></i> BAC Calculator</h2>
+                
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Weight</label>
+                        <div class="unit-selector">
+                            <button class="unit-btn active" data-unit="lbs">lbs</button>
+                            <button class="unit-btn" data-unit="kg">kg</button>
+                        </div>
+                        <input type="number" id="weight" min="50" max="400" value="180" placeholder="Enter your weight">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Hours Since First Drink</label>
+                        <input type="number" id="hours" min="0" max="24" step="0.25" value="2" placeholder="Hours elapsed">
+                    </div>
+                </div>
+                
+                <h3 class="card-title" style="font-size: 1.3rem; margin-top: 2rem;"><i class="fas fa-wine-glass-alt"></i> Drinks Consumed</h3>
+                
+                <div id="drinks-container">
+                    
+                    <div class="drink-item" data-drink="beer">
+                        <div class="drink-icon">
+                            <i class="fas fa-beer"></i>
+                        </div>
+                        <div class="drink-details">
+                            <div class="drink-name">Beer (5% ABV)</div>
+                            <div class="drink-info">12 oz • Standard beer serving</div>
+                        </div>
+                        <div class="drink-controls">
+                            <input type="number" class="drink-quantity-input" data-drink="beer" min="0" step="1" value="0" placeholder="0">
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="drink-item" data-drink="wine">
+                        <div class="drink-icon">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <div class="drink-details">
+                            <div class="drink-name">Wine (12% ABV)</div>
+                            <div class="drink-info">5 oz • Standard wine serving</div>
+                        </div>
+                        <div class="drink-controls">
+                            <input type="number" class="drink-quantity-input" data-drink="wine" min="0" step="1" value="0" placeholder="0">
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="drink-item" data-drink="liquor">
+                        <div class="drink-icon">
+                            <i class="fas fa-glass-whiskey"></i>
+                        </div>
+                        <div class="drink-details">
+                            <div class="drink-name">Liquor (40% ABV)</div>
+                            <div class="drink-info">1.5 oz • Standard shot</div>
+                        </div>
+                        <div class="drink-controls">
+                            <input type="number" class="drink-quantity-input" data-drink="liquor" min="0" step="1" value="0" placeholder="0">
+                        </div>
+                    </div>
+                    
+                 
+                    <div class="drink-item" data-drink="custom">
+                        <div class="drink-icon">
+                            <i class="fas fa-cocktail"></i>
+                        </div>
+                        <div class="drink-details">
+                            <div class="drink-name">Other Drink</div>
+                            <div class="drink-info custom-drink-inputs">
+                                <div class="custom-input-row">
+                                    <div class="custom-input-group">
+                                        <label for="custom-volume">Volume:</label>
+                                        <div style="display: flex; gap: 8px; align-items: center;">
+                                            <input type="number" id="custom-volume" min="0.1" max="100" step="0.1" value="1.5" style="width: 70px;">
+                                            <select id="custom-volume-unit" style="width: 80px;">
+                                                <option value="oz">oz</option>
+                                                <option value="ml">ml</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="custom-input-group">
+                                        <label for="custom-abv">Alcohol %:</label>
+                                        <input type="number" id="custom-abv" min="0.1" max="100" step="0.1" value="40" style="width: 80px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drink-controls">
+                            <input type="number" class="drink-quantity-input" data-drink="custom" min="0" step="1" value="0" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" id="calculate">
+                    <i class="fas fa-calculator"></i> Calculate BAC
+                </button>
+            </div>
+            
+            <div class="results-card">
+                <h2 class="card-title"><i class="fas fa-chart-line"></i> Results</h2>
+                
+                <div id="results-placeholder">
+                    <div class="bac-result">
+                        <div class="bac-value">0.000%</div>
+                        <div class="bac-level level-sober">Sober</div>
+                        <p class="result-text">Enter your information and click "Calculate BAC" to see your estimated blood alcohol concentration.</p>
+                    </div>
+                    
+                    <h3 class="card-title" style="font-size: 1.3rem;"><i class="fas fa-balance-scale"></i> Legal Limits</h3>
+                    
+                    <div class="legal-limits">
+                        <div class="limit-card safe">
+                            <div class="limit-title">Safe Driving</div>
+                            <div class="limit-value">&lt; 0.03%</div>
+                            <div class="limit-desc">Minimal impairment</div>
+                        </div>
+                        
+                        <div class="limit-card caution">
+                            <div class="limit-title">Driving Impairment</div>
+                            <div class="limit-value">0.03% - 0.07%</div>
+                            <div class="limit-desc">Judgment affected</div>
+                        </div>
+                        
+                        <div class="limit-card illegal">
+                            <div class="limit-title">DUI Illegal</div>
+                            <div class="limit-value">≥ 0.08%</div>
+                            <div class="limit-desc">All 50 US states</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="results-output" style="display: none;">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use-section" id="how-to-use">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-question-circle"></i> How to Use the BAC Calculator</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem; color: var(--gray); font-size: 1.05rem;">
+                    Follow these simple steps to estimate your blood alcohol concentration (BAC) using our calculator. This tool helps you understand your impairment level after consuming alcohol.
+                </p>
+                
+                <div class="how-to-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Enter Your Information</h3>
+                        <p class="step-desc">Select your gender (male or female) and enter your weight. You can choose between pounds (lbs) or kilograms (kg) using the unit selector. These factors affect how your body metabolizes alcohol.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Add Time Elapsed</h3>
+                        <p class="step-desc">Enter how many hours have passed since you started drinking. Alcohol is metabolized at an average rate of 0.015% BAC per hour, so this significantly affects your current BAC level.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Add Your Drinks</h3>
+                        <p class="step-desc">Use the + and - buttons to add the number of drinks you've consumed. We provide three standard drink types (beer, wine, liquor) and a custom option for other beverages. For custom drinks, enter the volume and alcohol percentage.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Calculate Your BAC</h3>
+                        <p class="step-desc">Click the "Calculate BAC" button to see your estimated blood alcohol concentration. Your results will show your BAC level, what it means, and how long it will take for your BAC to return to zero.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Understand Your Results</h3>
+                        <p class="step-desc">Compare your BAC to legal driving limits and understand your impairment level. The calculator also shows when you'll likely be sober again based on average metabolism rates.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <h3 class="step-title">Make Safe Decisions</h3>
+                        <p class="step-desc">Use this information to make responsible decisions about driving or continuing to drink. Remember, this is an estimate only - when in doubt, don't drive. Always plan for a safe way home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== NEW SECTION: BAC Levels Chart ====== -->
+        <section class="bac-chart-section" id="bac-chart">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Blood Alcohol Concentration Levels Chart</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 1rem; color: var(--gray); font-size: 1.05rem;">
+                    Visual guide to understanding how different BAC levels affect your body and impairment level.
+                </p>
+                
+                <div class="chart-container">
+                    <img src="bac-levels-chart1.png" 
+                         alt="Blood Alcohol Concentration Levels Chart showing BAC ranges and their effects" 
+                         class="chart-image">
+                    <img src="bac-levels-chart2.png" 
+                         alt="Blood Alcohol Concentration Levels Chart showing BAC ranges and their effects" 
+                         class="chart-image">
+
+                    <p class="chart-caption">Blood Alcohol Concentration (BAC) levels and their corresponding effects on the human body.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-comments"></i> Frequently Asked Questions</h2>
+                
+                <div class="faq-container">
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> what is blood alcohol concentration(bac)?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Blood Alcohol Concentration, abbreviated as BAC, refers to the measured alcohol content in human blood, typically expressed as a percentage (e.g., 0.08%). This indicates the number of milligrams of alcohol present per 100 milliliters of blood. It serves as the internationally recognized standard for assessing alcohol levels within the body, directly reflecting the extent of alcohol consumption by an individual. Consuming alcoholic beverages or foods containing alcohol can affect your Blood Alcohol Concentration level.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> What is BAC calculator?
+                        </div>
+                        <div class="faq-answer">
+                            <p>The blood alcohol concentration (BAC) calculator is a tool—typically an app, web-based tool, or software designed based on the principle of a universal formula for alcohol metabolism—used to estimate an individual's current blood alcohol concentration (BAC). Most people use it after consuming alcoholic beverages to determine when they can drive or when they will be sober. However, it's crucial to understand that a BAC calculator is not a medical diagnostic device. It provides a theoretical BAC estimate based on a widely accepted formula (a variant of the Widmark formula) and the personal parameters entered. This estimate has a significant margin of error and should only be used as a rough guide. It cannot serve as a completely reliable basis for driving decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>How does a bac calculator work?
+                        </div>
+                        <div class="faq-answer">
+                            <p><p><b>How It Works (Simple Version):</b></p>
+It uses a standard formula with three main steps:<br>
+<ol>
+<li>Total Alcohol: It calculates the grams of pure alcohol you drank (using drink type, strength, and volume).</li>
+
+<li>Body Distribution: It divides that total by your body weight and a gender factor (men ≈ 0.68, women ≈ 0.55). This gives an estimated peak BAC. (This is based on the Widmark Formula).</li>
+
+<li>Time Factor: It subtracts alcohol your body has already metabolized (removed). The average metabolism rate used is 0.015% BAC per hour.</li>
+
+<p><b>Basic Inputs You Provide:</b></p>
+<ol>
+<li>Gender</li>
+
+<li>Body Weight</li>
+
+<li>Number and type of drinks</li>
+
+<li>Time spent drinking</li>
+</ol>
+
+<p><b>Important Limitations:</b></p>
+It's an estimate only. Your actual BAC can be higher or lower.
+
+It cannot account for:
+<ol>
+
+<li>Your personal metabolism speed</li>
+
+<li>Food in your stomach</li>
+
+<li>Your body fat percentage or health</li>
+
+<li>How fast you drank</li>
+
+</ol>
+
+The Bottom Line:
+It's a useful educational tool to understand how alcohol affects the body, but never use it to decide if you're safe to drive.
+
+**The only safe rule is: If you drink, don't drive.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> Is there a bac calculator?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our BAC calculator is designed based on the Widmark formula. It's a free online BAC calculator where you can input your gender, weight, alcohol content/type (percentage alcohol by volume), and time of consumption. Then click "Calculate BAC" and our BAC calculator will provide you with an estimated value. You can use this estimate to gauge how long it will take for your blood alcohol concentration to return to zero. Please remember this is for reference only.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> How accurate is this BAC calculator?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our BAC calculator provides scientific estimates based on widely accepted formulas and average metabolic rates. However, it is not entirely accurate. The blood alcohol concentration values it calculates are merely estimates, with potential errors reaching approximately 20%. Individuals metabolize alcohol at different rates, and alcohol consumption varies depending on food intake during drinking. Additionally, personal health conditions and other factors such as medications or physical conditions differ. Therefore, considering all these variables, it is clear that the BAC calculator's results are merely a general estimate based on standardized conditions and cannot serve as a reliable basis for determining a driver's fitness to operate a vehicle. Accurate measurement requires official breathalyzers or blood tests. Based on these conclusions, we advise that BAC calculators should only be used for personal understanding of approximate alcohol metabolism. They cannot replace professional alcohol testing and must never be the sole basis for deciding whether to drive.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> what is the best bac calculator?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Based on Google search results, we've compiled a list of the top ten best blood alcohol concentration calculators. These tools have been personally tested by us and are both easy to use and reliable. Here is the ranking of the top 10 most accurate BAC calculators:
+                            <ol>
+                                <li><a href="https://www.calculator.net/bac-calculator.html" rel="nofollow">https://www.calculator.net/bac-calculator.html</a></li>
+                                <li><a href="https://baclevelcalculator.com">https://baclevelcalculator.com</a></li>
+                                <li><a href="https://alcohol.org/bac-calculator/" rel="nofollow">https://alcohol.org/bac-calculator/</a></li>
+                                <li><a href="https://www.drinkfox.com/tools/bac-calculator" rel="nofollow">https://www.drinkfox.com/tools/bac-calculator</a></li>
+                                <li><a href="https://prevention.dasa.ncsu.edu/aod/bac/" rel="nofollow">https://prevention.dasa.ncsu.edu/aod/bac/</a></li>
+                                <li><a href="https://www.intox.com/drink-wheel/" rel="nofollow">https://www.intox.com/drink-wheel/</a></li>
+                                <li><a href="https://drunkcalc.com/#step-one" rel="nofollow">https://drunkcalc.com/#step-one</a></li>
+                                <li><a href="https://aod.wellbeing.wfu.edu/resources/blood-alcohol-calculator/" rel="nofollow">https://aod.wellbeing.wifi.edu/resources/blood-alcohol-calculator/</a></li>
+                                <li><a href="https://www.scheuermanlaw.com/bac-calculator/" rel="nofollow">https://www.scheuermanlaw.com/bac-calculator/</a></li>
+                                <li><a href="https://alcohol.indianapolis.iu.edu/calculators/bac.html" rel="nofollow">https://alcohol.indianapolis.iu.edu/calculators/bac.html</a></li>
+
+                            </ol>
+
+</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> What counts as one standard drink?
+                        </div>
+                        <div class="faq-answer">
+                            <p>In the United States, a standard drink contains approximately 14 grams of pure alcohol. This is equivalent to: - 12 ounces of regular beer (5% alcohol by volume) - 5 ounces of wine (12% alcohol by volume) - 1.5 ounces of distilled spirits (40% alcohol by volume) Our Bac Calculator incorporates these standard measurement units. Of course, to accommodate users in different countries and regions where measurement units may vary, our calculator also offers customizable measurement unit settings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> How long does alcohol stay in your system?
+                        </div>
+                        <div class="faq-answer">
+                            <p>The average rate at which alcohol is metabolized in the human body is 0.015% blood alcohol concentration (BAC) per hour. In other words, it takes approximately one hour to fully metabolize one standard drink. This metabolic rate should be understood as a general average. Actual rates vary among individuals—some metabolize faster, others slower—so this figure serves only as a reference and may be inaccurate. However, the liver typically metabolizes alcohol at a constant rate—neither coffee, cold showers, nor exercise will accelerate this process.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> What are the legal BAC limits for driving?
+                        </div>
+                        <div class="faq-answer">
+                            <p>In the United States, the legal limit for driving is 0.08% BAC in all 50 states. Commercial drivers have a limit of 0.04%, and drivers under 21 have a "zero tolerance" limit (typically 0.00-0.02% depending on the state). Many other countries have limits of 0.05% or lower.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> Can I use this calculator to determine if I'm safe to drive?
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>No.</strong> Our alcohol BAC calculator is for informational and educational purposes only. When driving, the safe standard for blood alcohol concentration (BAC) is 0.00%. Many factors can affect the actual impairment of your driving ability, and even a BAC below 0.08% may impair driving ability. Therefore, when you plan to drive, please exercise caution and never drive under the influence. For your safety and the safety of others, it is recommended to designate a non-drinking driver or choose alternative transportation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i> Why does gender affect BAC calculation?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Women typically have a higher percentage of body fat and lower percentage of body water than men of the same weight. Since alcohol is distributed in body water, women generally reach higher BAC levels than men after consuming the same amount of alcohol. Hormonal factors and enzyme differences also play a role.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="info-sections">
+            <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> About BAC Calculation</h3>
+                <p>Blood Alcohol Concentration (BAC) is calculated using the Widmark formula, which considers your weight, gender, number of drinks, and time elapsed.</p>
+                <p>This calculator uses standard drink sizes (14g pure alcohol per drink) and accounts for alcohol metabolism (approximately 0.015% per hour).</p>
+                <p>Remember: This is an estimate only. Actual BAC can vary based on metabolism, food intake, medication, and other factors.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-exclamation-triangle"></i> Effects of Alcohol</h3>
+                <ul>
+                    <li><strong>Level1. 0.02-0.03%:</strong> Slight mood elevation, some loss of judgment</li>
+                    <li><strong>Level2. 0.04-0.06%:</strong> Feeling of relaxation, lowered inhibition</li>
+                    <li><strong>Level3. 0.07-0.09%:</strong> Impaired balance, speech, vision, reaction time</li>
+                    <li><strong>Level4. 0.10-0.12%:</strong> Significant impairment of motor coordination</li>
+                    <li><strong>Level5. 0.13-0.15%:</strong> Gross motor impairment, blurred vision</li>
+                    <li><strong>Level5. 0.16-0.20%:</strong> Dysphoria, nausea, possible blackouts</li>
+                    <li><strong><u style="color:#FF0000;">Level6. 0.25%+:</u></strong> Severe intoxication, risk of alcohol poisoning</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-car"></i> Safe Driving Tips</h3>
+                <ul>
+                    <li>The only safe driving limit is <strong>0.00% BAC</strong></li>
+                    <li>Plan ahead: designate a sober driver or use ride-sharing</li>
+                    <li>Allow at least one hour per standard drink before driving</li>
+                    <li>Eating food can slow absorption but won't prevent impairment</li>
+                    <li>Coffee, cold showers, or exercise do NOT sober you up</li>
+                    <li>Many DUI arrests occur the morning after drinking</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <h3><i class="fas fa-exclamation-circle"></i> Important Disclaimer</h3>
+            <p>This blood alcohol calculator provides estimates only. Individual metabolism, food consumption, medication, and other factors can significantly affect actual BAC. Do not drive after drinking alcohol. This tool is for educational purposes and should not be used to determine if you are safe to drive. Always err on the side of caution and use a designated driver or alternative transportation.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BAC Calculator</h4>
+                    <p>A free tool to estimate blood alcohol concentration. Empowering informed decisions about alcohol consumption and driving safety.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#how-to-use">How to Use the Calculator</a></li>
+                        <li><a href="#calculator">BAC Calculator</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                        <li><a href="#">Standard Drink Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.niaaa.nih.gov">National Institute on Alcohol Abuse</a></li>
+                        <li><a href="https://www.cdc.gov/alcohol/about-alcohol-use/index.html">CDC Alcohol Guidelines</a></li>
+                        <li><a href="https://www.nhtsa.gov/risky-driving/drunk-driving">NHTSA Drunk Driving Facts</a></li>
+                        <li><a href="https://www.facebook.com/samhsa/posts/samhsas-national-helpline-1-800-662-help-4357-is-a-confidential-free-247365-info/806991510777639/">SAMHSA Helpline</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 BAC Calculator. This tool is for educational purposes only. Always drink responsibly.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+
+    <script>
+        // 
+        const ALCOHOL_DENSITY = 0.789;
+        
+        // 
+        const OZ_TO_ML = 29.5735;
+        
+        // 
+        const drinkDatabase = [
+            { 
+                id: "beer", 
+                name: "Beer (5% ABV)", 
+                icon: "fa-beer", 
+                volume: 12, 
+                unit: "oz", 
+                abv: 5, 
+                alcoholGrams: 14 
+            },
+            { 
+                id: "wine", 
+                name: "Wine (12% ABV)", 
+                icon: "fa-wine-glass", 
+                volume: 5, 
+                unit: "oz", 
+                abv: 12, 
+                alcoholGrams: 14 
+            },
+            { 
+                id: "liquor", 
+                name: "Liquor (40% ABV)", 
+                icon: "fa-glass-whiskey", 
+                volume: 1.5, 
+                unit: "oz", 
+                abv: 40, 
+                alcoholGrams: 14 
+            },
+            { 
+                id: "custom", 
+                name: "Other Drink", 
+                icon: "fa-cocktail", 
+                // 
+                isCustom: true 
+            }
+        ];
+
+        // 
+        let currentDrinks = [
+            { id: "beer", quantity: 0 },
+            { id: "wine", quantity: 0 },
+            { id: "liquor", quantity: 0 },
+            { id: "custom", quantity: 0 }
+        ];
+
+        // 
+        const LBS_TO_KG = 0.453592;
+
+        // 
+        document.addEventListener('DOMContentLoaded', function() {
+            // 
+            const unitButtons = document.querySelectorAll('.unit-btn');
+            const weightInput = document.getElementById('weight');
+            
+            unitButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const unit = this.getAttribute('data-unit');
+                    
+                    // 
+                    unitButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 
+                    const currentWeight = parseFloat(weightInput.value) || 0;
+                    
+                    if (unit === 'kg' && this.classList.contains('active')) {
+                        // 
+                        if (!weightInput.hasAttribute('data-converted')) {
+                            const kgWeight = currentWeight * LBS_TO_KG;
+                            weightInput.value = kgWeight.toFixed(1);
+                            weightInput.setAttribute('data-converted', 'true');
+                        }
+                    } else if (unit === 'lbs' && this.classList.contains('active')) {
+                        // 
+                        if (weightInput.hasAttribute('data-converted')) {
+                            const lbsWeight = currentWeight / LBS_TO_KG;
+                            weightInput.value = lbsWeight.toFixed(0);
+                            weightInput.removeAttribute('data-converted');
+                        }
+                    }
+                });
+            });
+
+            // 
+            const drinkInputs = document.querySelectorAll('.drink-quantity-input');
+            drinkInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    const drinkId = this.getAttribute('data-drink');
+                    let quantity = parseInt(this.value) || 0;
+                    
+                    // 
+                    if (quantity < 0 || isNaN(quantity)) {
+                        quantity = 0;
+                        this.value = 0;
+                    } else if (!Number.isInteger(quantity)) {
+                        quantity = Math.floor(quantity);
+                        this.value = quantity;
+                    }
+                    
+                    // 
+                    const drinkIndex = currentDrinks.findIndex(d => d.id === drinkId);
+                    if (drinkIndex !== -1) {
+                        currentDrinks[drinkIndex].quantity = quantity;
+                    }
+                });
+                
+                // 
+                input.addEventListener('input', function() {
+                    let value = this.value;
+                    
+                    // 
+                    if (value === '' || value === null || value === undefined) {
+                        this.value = 0;
+                        
+                        const drinkId = this.getAttribute('data-drink');
+                        const drinkIndex = currentDrinks.findIndex(d => d.id === drinkId);
+                        if (drinkIndex !== -1) {
+                            currentDrinks[drinkIndex].quantity = 0;
+                        }
+                    }
+                });
+            });
+
+            // 
+            document.getElementById('calculate').addEventListener('click', calculateBAC);
+            
+            // 
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // 
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // 
+                    if (window.innerWidth <= 768) {
+                        const answer = this.nextElementSibling;
+                        answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        // 
+        function calculateCustomDrinkAlcohol() {
+            const volume = parseFloat(document.getElementById('custom-volume').value) || 0;
+            const unit = document.getElementById('custom-volume-unit').value;
+            const abv = parseFloat(document.getElementById('custom-abv').value) || 0;
+            
+            // 
+            const drinkIndex = currentDrinks.findIndex(d => d.id === 'custom');
+            const quantity = drinkIndex !== -1 ? currentDrinks[drinkIndex].quantity : 0;
+            
+            if (volume <= 0 || abv <= 0 || quantity <= 0) return 0;
+            
+            // 
+            let volumeInMl;
+            if (unit === 'oz') {
+                volumeInMl = volume * OZ_TO_ML;
+            } else {
+                volumeInMl = volume;
+            }
+            
+            // 
+            const alcoholGrams = volumeInMl * (abv / 100) * ALCOHOL_DENSITY * quantity;
+            
+            return alcoholGrams;
+        }
+
+        // 
+        function calculateBAC() {
+            // 
+            const gender = document.getElementById('gender').value;
+            const weight = parseFloat(document.getElementById('weight').value);
+            const hours = parseFloat(document.getElementById('hours').value) || 0;
+            
+            // 
+            const isKg = document.querySelector('.unit-btn[data-unit="kg"]').classList.contains('active');
+            let weightInKg;
+            
+            if (isKg) {
+                weightInKg = weight;
+            } else {
+                // 
+                weightInKg = weight * LBS_TO_KG;
+            }
+            
+            // 
+            let totalAlcohol = 0;
+            
+            currentDrinks.forEach(drink => {
+                const drinkData = drinkDatabase.find(d => d.id === drink.id);
+                if (drinkData) {
+                    if (drinkData.isCustom) {
+                        // 
+                        totalAlcohol += calculateCustomDrinkAlcohol();
+                    } else {
+                        // 
+                        totalAlcohol += drinkData.alcoholGrams * drink.quantity;
+                    }
+                }
+            });
+            
+            if (totalAlcohol === 0) {
+                alert("Please add at least one drink to calculate BAC.");
+                return;
+            }
+            
+            // 
+            const r = gender === 'male' ? 0.68 : 0.55; // 
+            const metabolismRate = 0.015; // 
+            
+            // 
+            const weightInGrams = weightInKg * 1000;
+            const bac = ((totalAlcohol / (weightInGrams * r)) * 100) - (metabolismRate * hours);
+            
+            // 
+            const finalBAC = Math.max(bac, 0);
+            
+            // 
+            displayResults(finalBAC, totalAlcohol, weightInKg, gender, hours);
+        }
+
+        // 
+        function displayResults(bac, totalAlcohol, weight, gender, hours) {
+            // 
+            const bacPercent = bac.toFixed(3);
+            const bacPerMille = (bac * 10).toFixed(2); // 
+            
+            // 
+            let level, levelClass, levelText, advice;
+            
+            if (bac < 0.02) {
+                level = "Sober";
+                levelClass = "level-sober";
+                levelText = "You are likely below the legal limit in most jurisdictions.";
+                advice = "You may feel minimal effects, but always exercise caution when driving.";
+            } else if (bac >= 0.02 && bac < 0.05) {
+                level = "Mild Impairment";
+                levelClass = "level-low";
+                levelText = "You may experience slight impairment of judgment and relaxation.";
+                advice = "Driving skills may be affected. Consider alternative transportation.";
+            } else if (bac >= 0.05 && bac < 0.08) {
+                level = "Significant Impairment";
+                levelClass = "level-medium";
+                levelText = "You are likely experiencing impaired balance, speech, vision, and reaction time.";
+                advice = "DO NOT DRIVE. You are above the legal limit in many countries.";
+            } else {
+                level = "Severe Impairment";
+                levelClass = "level-high";
+                levelText = "You are at high risk of accidents and alcohol poisoning.";
+                advice = "DO NOT DRIVE. Seek a safe way home and consider medical attention if needed.";
+            }
+            
+            // 
+            const hoursToZero = bac / 0.015;
+            const zeroTime = new Date(Date.now() + (hoursToZero * 60 * 60 * 1000));
+            const formattedTime = zeroTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            // 
+            const resultsHTML = `
+                <div class="bac-result fade-in">
+                    <div class="bac-value">${bacPercent}%</div>
+                    <div class="bac-level ${levelClass}">${level}</div>
+                    <p class="result-text">${levelText}</p>
+                    <p class="result-text"><strong>Advice:</strong> ${advice}</p>
+                </div>
+                
+                <h3 class="card-title" style="font-size: 1.3rem; margin-top: 2rem;"><i class="fas fa-chart-bar"></i> BAC Details</h3>
+                
+                <div class="legal-limits" style="margin-top: 1.5rem;">
+                    <div class="limit-card">
+                        <div class="limit-title">Alcohol Consumed</div>
+                        <div class="limit-value">${totalAlcohol.toFixed(1)}g</div>
+                        <div class="limit-desc">Total pure alcohol</div>
+                    </div>
+                    
+                    <div class="limit-card">
+                        <div class="limit-title">BAC in g/L</div>
+                        <div class="limit-value">${bacPerMille} g/L</div>
+                        <div class="limit-desc">Common European unit</div>
+                    </div>
+                    
+                    <div class="limit-card">
+                        <div class="limit-title">Hours to 0%</div>
+                        <div class="limit-value">${hoursToZero.toFixed(1)}h</div>
+                        <div class="limit-desc">~${formattedTime}</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; background-color: #f8fafc; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="font-family: 'Poppins', sans-serif; margin-bottom: 1rem; color: var(--dark);">Calculation Details</h4>
+                    <p style="margin-bottom: 0.5rem;"><strong>Formula:</strong> Widmark formula (BAC = (A / (W × r)) × 100 - (β × T))</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Distribution ratio (r):</strong> ${gender === 'male' ? '0.68 (male)' : '0.55 (female)'}</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Metabolism rate:</strong> 0.015% per hour</p>
+                    <p style="margin-bottom: 0;"><strong>Time since first drink:</strong> ${hours} hours</p>
+                </div>
+            `;
+            
+            // 
+            document.getElementById('results-placeholder').style.display = 'none';
+            const outputDiv = document.getElementById('results-output');
+            outputDiv.innerHTML = resultsHTML;
+            outputDiv.style.display = 'block';
+            
+            // 
+            const bacValue = document.querySelector('.bac-value');
+            bacValue.style.animation = 'none';
+            setTimeout(() => {
+                bacValue.style.animation = 'fadeIn 0.5s ease forwards';
+            }, 10);
+        }
+    </script>
+</body>
+</html>

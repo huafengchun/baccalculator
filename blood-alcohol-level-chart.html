@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Blood Alcohol Content (BAC) Levels Chart - Normal & Drinking & Driving</title>
+    <meta name="description" content="Comprehensive BAC chart showing normal levels, impairment stages, and legal limits for driving. Learn how different BAC percentages affect your body, behavior, and driving safety.">
+    <meta name="keywords" content="blood alcohol level chart, BAC chart, blood alcohol content chart, alcohol effects chart, bac level chart, normal blood alcohol level, drinking and driving limit">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blood Alcohol Content (BAC) Levels Chart - Normal & Drinking & Driving">
+    <meta property="og:description" content="Comprehensive BAC chart showing normal levels, impairment stages, and legal limits for driving. Learn how different BAC percentages affect your body, behavior, and driving safety.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baclevelcalculator.com/blood-alcohol-level-chart/">
+    <meta property="og:image" content="https://baclevelcalculator.com/bac-chart-og.jpg">
+    <meta property="og:site_name" content="BAC Calculator">
+    <link rel="canonical" href="https://baclevelcalculator.com/blood-alcohol-level-chart/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://baclevelcalculator.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://baclevelcalculator.com/apple-touch-icon.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --border-radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.75rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .logo-icon {
+            font-size: 2.2rem;
+            margin-right: 0.75rem;
+        }
+        
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 1.25rem;
+        }
+        
+        .quick-nav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem;
+        }
+        
+        .page-title h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 1.9rem;
+            }
+        }
+        
+        .page-description {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 480px) {
+            .page-description {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        /* Main Chart Container */
+        .main-chart-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .main-chart-container {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-chart-container {
+                padding: 1.5rem;
+            }
+        }
+        
+        .chart-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .chart-title {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chart-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .chart-title i {
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .chart-description {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .chart-image {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+        
+        .chart-caption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-style: italic;
+            text-align: center;
+        }
+        
+        /* BAC Level Legend */
+        .bac-legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        
+        .legend-sober {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #065f46;
+        }
+        
+        .legend-low {
+            background-color: rgba(245, 158, 11, 0.2);
+            color: #92400e;
+        }
+        
+        .legend-medium {
+            background-color: rgba(249, 115, 22, 0.2);
+            color: #9a3412;
+        }
+        
+        .legend-high {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #991b1b;
+        }
+        
+        .legend-danger {
+            background-color: rgba(220, 38, 38, 0.2);
+            color: #7f1d1d;
+        }
+        
+        /* BAC Effects Table */
+        .bac-effects-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .bac-effects-section {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bac-effects-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .section-title i {
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .section-description {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .bac-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .bac-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .bac-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+            vertical-align: top;
+        }
+        
+        .bac-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .bac-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .bac-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .bac-table th,
+            .bac-table td {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+                min-width: 150px;
+            }
+        }
+        
+        .bac-level-cell {
+            font-weight: 600;
+            width: 120px;
+        }
+        
+        .bac-level-0 {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        
+        .bac-level-1 {
+            background-color: rgba(245, 158, 11, 0.05);
+        }
+        
+        .bac-level-2 {
+            background-color: rgba(249, 115, 22, 0.05);
+        }
+        
+        .bac-level-3 {
+            background-color: rgba(239, 68, 68, 0.05);
+        }
+        
+        .bac-level-4 {
+            background-color: rgba(220, 38, 38, 0.05);
+        }
+        
+        
+        .gender-charts-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gender-charts-section {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gender-charts-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        .gender-charts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gender-chart {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            border: 1px solid var(--gray-light);
+            overflow-x: auto; 
+        }
+        
+        @media (max-width: 768px) {
+            .gender-chart {
+                padding: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gender-chart {
+                padding: 1rem;
+            }
+        }
+        
+        .gender-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .gender-title {
+                font-size: 1.4rem;
+                margin-bottom: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gender-title {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .gender-title i {
+            margin-right: 0.75rem;
+            font-size: 1.3rem;
+        }
+        
+        .male-title {
+            color: #3b82f6;
+        }
+        
+        .female-title {
+            color: #ec4899;
+        }
+        
+        .gender-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 800px; 
+        }
+        
+        @media (max-width: 768px) {
+            .gender-table {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gender-table {
+                font-size: 0.75rem;
+                min-width: 700px;
+            }
+        }
+        
+        .gender-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gender-table th:last-child {
+            border-right: none;
+        }
+        
+        .gender-table td {
+            padding: 0.75rem 0.5rem;
+            border: 1px solid var(--gray-light);
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            .gender-table th,
+            .gender-table td {
+                padding: 0.6rem 0.4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gender-table th,
+            .gender-table td {
+                padding: 0.5rem 0.3rem;
+            }
+        }
+        
+        .gender-table .weight-header {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .gender-table .drink-header {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+        
+        .bac-value-cell {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+
+        .bac-0 {
+            background-color: rgba(16, 185, 129, 0.2);
+        }
+        
+        .bac-1 {
+            background-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .bac-2 {
+            background-color: rgba(245, 158, 11, 0.2);
+        }
+        
+        .bac-3 {
+            background-color: rgba(245, 158, 11, 0.3);
+        }
+        
+        .bac-4 {
+            background-color: rgba(249, 115, 22, 0.2);
+        }
+        
+        .bac-5 {
+            background-color: rgba(249, 115, 22, 0.3);
+        }
+        
+        .bac-6 {
+            background-color: rgba(239, 68, 68, 0.2);
+        }
+        
+        .bac-7 {
+            background-color: rgba(239, 68, 68, 0.3);
+        }
+        
+        .bac-8 {
+            background-color: rgba(220, 38, 38, 0.2);
+        }
+        
+        .bac-9 {
+            background-color: rgba(220, 38, 38, 0.3);
+        }
+        
+        .bac-10 {
+            background-color: rgba(153, 27, 27, 0.2);
+        }
+        
+
+        .chart-instructions {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: rgba(37, 99, 235, 0.05);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 480px) {
+            .chart-instructions {
+                padding: 1.25rem;
+                margin-top: 1.5rem;
+            }
+        }
+        
+        .chart-instructions h4 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .chart-instructions h4 i {
+            margin-right: 0.5rem;
+        }
+        
+        .chart-instructions ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .chart-instructions ul {
+                padding-left: 1.25rem;
+            }
+        }
+        
+        .chart-instructions li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .effect-key {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .effect-key {
+                gap: 0.5rem;
+            }
+        }
+        
+        .effect-key-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 480px) {
+            .effect-key-item {
+                font-size: 0.75rem;
+            }
+        }
+        
+        .effect-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        /* BAC Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+        }
+        
+        .comparison-card {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 1.75rem;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .comparison-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .comparison-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-desc {
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        
+        /* Standard Drinks Reference */
+        .drinks-reference {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .drinks-reference {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .drinks-reference {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        .drink-card {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .drink-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .drink-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .drink-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .drink-details {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .drink-alcohol {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        /* Metabolism Info */
+        .metabolism-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .metabolism-info {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        .metabolism-card {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 1.75rem;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .metabolism-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        .metabolism-card h3 i {
+            margin-right: 0.75rem;
+            color: var(--secondary);
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid var(--danger);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-title {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.75rem;
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-title i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 480px) {
+            footer {
+                padding: 2.5rem 0 1.75rem;
+                margin-top: 2.5rem;
+            }
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 1.75rem;
+            }
+        }
+        
+        .footer-section h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-section h4 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links li {
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            .copyright {
+                padding-top: 1.75rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 480px) {
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        /* Interactive BAC Scale */
+        .bac-scale-container {
+            margin: 2rem 0;
+            position: relative;
+            height: 100px;
+            background: linear-gradient(to right, 
+                #10b981 0%, 
+                #10b981 20%,
+                #f59e0b 20%,
+                #f59e0b 50%,
+                #f97316 50%,
+                #f97316 70%,
+                #ef4444 70%,
+                #ef4444 90%,
+                #dc2626 90%,
+                #dc2626 100%);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .bac-scale-labels {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            bottom: -25px;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .bac-scale-label {
+            position: relative;
+        }
+        
+        .bac-scale-label::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 10px;
+            background-color: var(--gray);
+        }
+.faq-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 1.5rem;
+    }
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .faq-item {
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-question {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.faq-question i {
+    color: var(--primary);
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    color: var(--gray);
+    line-height: 1.6;
+    padding-left: 2rem;
+}
+
+@media (max-width: 480px) {
+    .faq-answer {
+        padding-left: 1.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+
+.faq-answer.collapsed {
+    display: none;
+}
+
+.faq-question .toggle-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.faq-question.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+    </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://baclevelcalculator.com/blood-alcohol-level-chart/#webpage",
+      "url": "https://baclevelcalculator.com/blood-alcohol-level-chart/",
+      "name": "Blood Alcohol Content (BAC) Levels Chart - Normal & Drinking & Driving",
+      "description": "Comprehensive BAC chart showing normal levels, impairment stages, and legal limits for driving. Learn how different BAC percentages affect your body, behavior, and driving safety.",
+      "isPartOf": {
+        "@id": "https://baclevelcalculator.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://baclevelcalculator.com/bac-level-chart-main.png",
+        "width": 1200,
+        "height": 630
+      },
+      "datePublished": "2026-02-07",
+      "dateModified": "2026-02-07",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://baclevelcalculator.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blood Alcohol Level Chart"
+            "item": "https://baclevelcalculator.com/blood-alcohol-level-chart/"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "@id": "https://baclevelcalculator.com/blood-alcohol-level-chart/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What exactly is Blood Alcohol Concentration (BAC)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Blood Alcohol Concentration (BAC) is a measurement of the amount of alcohol in a person's bloodstream, expressed as a percentage. For example, a BAC of 0.08% means there are 0.08 grams of alcohol per 100 milliliters of blood. It is the key metric used to define legal impairment for driving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the legal blood alcohol limit for driving in the USA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the United States, the legal BAC limit for drivers aged 21 and over is 0.08%. Lower limits apply for specific groups: 0.04% for commercial drivers, and 0.00%-0.02% for drivers under 21. Utah has a stricter limit of 0.05% for all drivers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is your blood alcohol level after one beer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a 160 lb man, one standard 12-oz beer (5% alcohol) typically raises BAC by about 0.02%. For a 160 lb woman, the increase is slightly higher, around 0.025%. Actual BAC depends on weight, gender, metabolism, and time elapsed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast does your body metabolize alcohol (lower BAC)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On average, the body metabolizes alcohol at a rate of about 0.015% BAC per hour. This is a constant process that cannot be sped up by coffee, showers, or exercise. For example, a BAC of 0.08% would take roughly 5.5 hours to return to 0.00%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What BAC level causes severe impairment or alcohol poisoning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BAC levels of 0.16%-0.20% often cause nausea and disorientation. Levels of 0.21%-0.30% pose a high risk of stupor, unconsciousness, and life-threatening alcohol poisoning. A BAC exceeding 0.30% can be fatal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do men and women have different BAC levels after the same drinks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Women generally reach higher BAC levels than men after consuming the same amount of alcohol due to differences in body composition (higher body fat percentage, lower body water percentage) and typically lower levels of the stomach enzyme (alcohol dehydrogenase) that breaks down alcohol."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a 'standard drink'?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard drink contains about 14 grams of pure alcohol. This equals: 12 oz of regular beer (5% ABV), 5 oz of table wine (12% ABV), or 1.5 oz of distilled spirits (40% ABV). Our charts are based on this measurement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "At what BAC is judgment impaired?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Judgment can begin to be impaired at BAC levels as low as 0.02%, with noticeable relaxation and lowered inhibitions. By 0.05%, judgment is significantly affected. At the legal limit of 0.08%, judgment, reasoning, and memory are clearly impaired."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://baclevelcalculator.com/#website",
+      "url": "https://baclevelcalculator.com",
+      "name": "BAC Calculator",
+      "description": "Free blood alcohol concentration (BAC) calculator. Estimate your BAC level based on drinks, weight, time and gender. Learn about alcohol metabolism and safe driving limits.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BAC Calculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://baclevelcalculator.com/logo1.jpg",
+          "width": 200,
+          "height": 60
+        }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h1>BAC Calculator</h1>
+                </div>
+                <p class="tagline">Complete visual guide to Blood Alcohol Concentration (BAC) levels and their effects on the human body.</p>
+                
+                <div class="quick-nav">
+                    <a href="https://baclevelcalculator.com" class="nav-link">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="https://baclevelcalculator.com#calculator" class="nav-link">
+                        <i class="fas fa-calculator"></i> Calculator
+                    </a>
+                    <a href="#main-chart" class="nav-link">
+                        <i class="fas fa-chart-bar"></i> BAC Chart
+                    </a>
+                    <a href="#effects-table" class="nav-link">
+                        <i class="fas fa-table"></i> Effects Table
+                    </a>
+                    <a href="#gender-charts" class="nav-link">
+                        <i class="fas fa-venus-mars"></i> Gender Comparison
+                    </a>
+					<a href="https://baclevelcalculator.com/legal-blood-alcohol-level/" class="nav-link">
+						<i class="fas fa-gavel"></i> Bac Legal
+					</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-title">
+            <h1>Blood Alcohol Level (BAC) Chart</h1>
+            <p class="page-description">A comprehensive visual guide to understanding how different Blood Alcohol Concentration (BAC) levels affect your body, behavior, and driving ability. Use this reference to understand impairment levels and legal limits.</p>
+        </div>
+        
+        <!-- Main BAC Chart -->
+        <section class="main-chart-container" id="main-chart">
+            <h2 class="chart-title"><i class="fas fa-chart-line"></i> Blood Alcohol Concentration (BAC) Chart</h2>
+            
+            <p class="chart-description">Blood Alcohol Concentration (BAC) is measured as a percentage of alcohol in your bloodstream. This chart visualizes how different BAC levels correspond to various physical and mental effects, from mild relaxation to life-threatening impairment.</p>
+            
+            <div class="bac-legend">
+                <div class="legend-item legend-sober">
+                    <div class="legend-color" style="background-color: #10b981;"></div>
+                    <span>Sober (0.00-0.03%)</span>
+                </div>
+                <div class="legend-item legend-low">
+                    <div class="legend-color" style="background-color: #f59e0b;"></div>
+                    <span>Low Impairment (0.04-0.06%)</span>
+                </div>
+                <div class="legend-item legend-medium">
+                    <div class="legend-color" style="background-color: #f97316;"></div>
+                    <span>Significant Impairment (0.07-0.09%)</span>
+                </div>
+                <div class="legend-item legend-high">
+                    <div class="legend-color" style="background-color: #ef4444;"></div>
+                    <span>Severe Impairment (0.10-0.20%)</span>
+                </div>
+                <div class="legend-item legend-danger">
+                    <div class="legend-color" style="background-color: #dc2626;"></div>
+                    <span>Dangerous Levels (0.21%+)</span>
+                </div>
+            </div>
+            
+            <div class="bac-scale-container">
+                <div class="bac-scale-labels">
+                    <div class="bac-scale-label">0.00%</div>
+                    <div class="bac-scale-label">0.03%</div>
+                    <div class="bac-scale-label">0.06%</div>
+                    <div class="bac-scale-label">0.09%</div>
+                    <div class="bac-scale-label">0.20%</div>
+                    <div class="bac-scale-label">0.30%+</div>
+                </div>
+            </div>
+            
+            <img src="https://baclevelcalculator.com/bac-level-chart-main.png" 
+                 alt="Blood Alcohol Concentration (BAC) Level Chart showing effects at different percentages" 
+                 class="chart-image">
+            <p class="chart-caption">Visual representation of Blood Alcohol Concentration (BAC) levels and their corresponding effects on the human body</p>
+            
+            <div class="chart-image">
+                <img src="/bac-levels-chart1.png" 
+                     alt="Blood Alcohol Concentration Levels Chart showing BAC ranges and their effects" 
+                     style="width: 100%; border-radius: 8px;">
+                <p class="chart-caption">Detailed BAC effects chart showing impairment levels at different blood alcohol concentrations</p>
+            </div>
+        </section>
+        
+        <!-- BAC Effects Table -->
+        <section class="bac-effects-section" id="effects-table">
+            <h2 class="section-title"><i class="fas fa-user-injured"></i> BAC Effects on Body and Behavior</h2>
+            
+            <p class="section-description">The table below details how different BAC levels affect cognitive function, physical coordination, and emotional state. Individual responses may vary based on tolerance, body composition, and other factors.</p>
+            
+            <table class="bac-table">
+                <thead>
+                    <tr>
+                        <th>BAC Level</th>
+                        <th>Typical Effects</th>
+                        <th>Physical Symptoms</th>
+                        <th>Driving Impairment</th>
+                        <th>Legal Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bac-level-0">
+                        <td class="bac-level-cell">0.01% - 0.03%</td>
+                        <td>Mild relaxation, slight euphoria, lowered inhibitions</td>
+                        <td>No loss of coordination, slight warmth</td>
+                        <td>Minimal to no impairment</td>
+                        <td>Legal to drive (but not recommended)</td>
+                    </tr>
+                    <tr class="bac-level-0">
+                        <td class="bac-level-cell">0.04% - 0.06%</td>
+                        <td>Feeling of well-being, relaxation, lower inhibitions, minor impairment of judgment</td>
+                        <td>Warmth, flushing, minor motor skill impairment</td>
+                        <td>Judgment and alertness affected</td>
+                        <td>Legal in most areas, but impairment begins</td>
+                    </tr>
+                    <tr class="bac-level-1">
+                        <td class="bac-level-cell">0.07% - 0.09%</td>
+                        <td>Euphoria, emotional swings, impaired judgment, lowered inhibitions</td>
+                        <td>Balance, speech, vision, reaction time impaired</td>
+                        <td>Significant impairment, illegal in all US states</td>
+                        <td>DUI illegal limit (0.08% in USA)</td>
+                    </tr>
+                    <tr class="bac-level-2">
+                        <td class="bac-level-cell">0.10% - 0.12%</td>
+                        <td>Over-expression, emotional instability, poor judgment</td>
+                        <td>Poor coordination, slurred speech, slower reaction time</td>
+                        <td>Dangerous impairment, gross motor skills affected</td>
+                        <td>Illegal everywhere, significant impairment</td>
+                    </tr>
+                    <tr class="bac-level-3">
+                        <td class="bac-level-cell">0.13% - 0.15%</td>
+                        <td>Gross motor impairment, anxiety, restlessness</td>
+                        <td>Major loss of balance, blurred vision, dysphoria</td>
+                        <td>Extreme danger, cannot drive safely</td>
+                        <td>Illegal, high risk of accident</td>
+                    </tr>
+                    <tr class="bac-level-3">
+                        <td class="bac-level-cell">0.16% - 0.20%</td>
+                        <td>Nausea, disorientation, possible blackouts</td>
+                        <td>Significant physical impairment, pain dulled</td>
+                        <td>Complete loss of driving ability</td>
+                        <td>Illegal, very high impairment</td>
+                    </tr>
+                    <tr class="bac-level-4">
+                        <td class="bac-level-cell">0.21% - 0.30%</td>
+                        <td>Stupor, loss of understanding, unconsciousness possible</td>
+                        <td>Severe physical impairment, risk of alcohol poisoning</td>
+                        <td>Completely incapacitated</td>
+                        <td>Medical emergency likely</td>
+                    </tr>
+                    <tr class="bac-level-4">
+                        <td class="bac-level-cell">0.31%+</td>
+                        <td>Coma, unconsciousness, death possible</td>
+                        <td>Life-threatening alcohol poisoning, potential death</td>
+                        <td>No capacity for any activity</td>
+                        <td>Life-threatening medical emergency</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning-box">
+                <h3 class="warning-title"><i class="fas fa-exclamation-triangle"></i> Important Safety Note</h3>
+                <p>BAC affects individuals differently based on tolerance, body weight, metabolism, food consumption, and other factors. These effects are general guidelines. The only safe BAC level for driving is 0.00%. Even small amounts of alcohol can impair judgment and reaction time. Always arrange for a designated driver or alternative transportation if you plan to drink.</p>
+            </div>
+        </section>
+        
+        
+        <section class="gender-charts-section" id="gender-charts">
+            <h2 class="section-title"><i class="fas fa-venus-mars"></i> BAC Comparison by Gender</h2>
+            
+            <p class="section-description">These charts show estimated Blood Alcohol Concentration (BAC) levels for men and women based on body weight and number of drinks consumed. Women generally have a higher percentage of body fat and lower percentage of body water than men of the same weight, which typically results in higher BAC levels after consuming the same amount of alcohol.</p>
+            
+            <div class="gender-charts-container">
+                
+                <div class="gender-chart">
+                    <h3 class="gender-title male-title"><i class="fas fa-mars"></i> Male BAC Chart</h3>
+                    <div class="table-container">
+                        <table class="gender-table" id="male-bac-table">
+                            <thead>
+                                <tr>
+                                    <th class="weight-header" rowspan="2">Weight (lbs)</th>
+                                    <th class="drink-header" colspan="10">Number of Drinks</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                </tr>
+                            </thead>
+                            <tbody id="male-bac-table-body">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                
+                <div class="gender-chart">
+                    <h3 class="gender-title female-title"><i class="fas fa-venus"></i> Female BAC Chart</h3>
+                    <div class="table-container">
+                        <table class="gender-table" id="female-bac-table">
+                            <thead>
+                                <tr>
+                                    <th class="weight-header" rowspan="2">Weight (lbs)</th>
+                                    <th class="drink-header" colspan="10">Number of Drinks</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                </tr>
+                            </thead>
+                            <tbody id="female-bac-table-body">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-instructions">
+                <h4><i class="fas fa-info-circle"></i> How to Use These Charts</h4>
+                <p>These charts provide estimated BAC levels based on the <strong>Widmark formula</strong>. Each "drink" represents:</p>
+                <ul>
+                    <li>1 oz of 100-proof liquor (50% alcohol)</li>
+                    <li>12 oz of regular beer (5% alcohol)</li>
+                    <li>5 oz of table wine (12% alcohol)</li>
+                </ul>
+                <p><strong>Important:</strong> These are estimates only. Actual BAC can vary by 20% or more due to individual metabolism, food intake, medication, and other factors.</p>
+                
+                <div class="effect-key">
+                    <div class="effect-key-item">
+                        <div class="effect-color" style="background-color: rgba(16, 185, 129, 0.3);"></div>
+                        <span>0.00-0.03%: Minimal impairment</span>
+                    </div>
+                    <div class="effect-key-item">
+                        <div class="effect-color" style="background-color: rgba(245, 158, 11, 0.3);"></div>
+                        <span>0.04-0.06%: Mild impairment</span>
+                    </div>
+                    <div class="effect-key-item">
+                        <div class="effect-color" style="background-color: rgba(249, 115, 22, 0.3);"></div>
+                        <span>0.07-0.09%: Significant impairment</span>
+                    </div>
+                    <div class="effect-key-item">
+                        <div class="effect-color" style="background-color: rgba(239, 68, 68, 0.3);"></div>
+                        <span>0.10-0.20%: Severe impairment</span>
+                    </div>
+                    <div class="effect-key-item">
+                        <div class="effect-color" style="background-color: rgba(220, 38, 38, 0.3);"></div>
+                        <span>0.21%+: Dangerous levels</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="warning-box" style="margin-top: 2rem;">
+                <h3 class="warning-title"><i class="fas fa-exclamation-circle"></i> Key Differences Between Men and Women</h3>
+                <p>Women typically reach higher BAC levels than men after consuming the same amount of alcohol because:</p>
+                <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>Body Composition:</strong> Women generally have higher body fat percentage and lower body water percentage than men.</li>
+                    <li><strong>Enzyme Levels:</strong> Women typically have lower levels of alcohol dehydrogenase, an enzyme that breaks down alcohol in the stomach.</li>
+                    <li><strong>Hormonal Factors:</strong> Hormonal fluctuations can affect alcohol metabolism in women.</li>
+                </ul>
+                <p style="margin-top: 1rem;">Regardless of gender, the only safe BAC for driving is 0.00%. Never drive after drinking.</p>
+            </div>
+        </section>
+        
+        <!-- BAC Legal Limits Comparison -->
+        <section class="bac-effects-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> BAC Legal Limits Comparison</h2>
+            
+            <p class="section-description">Different countries and driver types have varying legal BAC limits. This comparison shows how BAC limits differ around the world and for different types of drivers.</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>USA Standard Limit</h3>
+                    <div class="comparison-value">0.08%</div>
+                    <p class="comparison-desc">Legal limit for regular drivers in all 50 states</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>USA Commercial Drivers</h3>
+                    <div class="comparison-value">0.04%</div>
+                    <p class="comparison-desc">Lower limit for commercial vehicle operators</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>USA Under 21</h3>
+                    <div class="comparison-value">0.00-0.02%</div>
+                    <p class="comparison-desc">Zero tolerance or very low limits for underage drivers</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Most European Countries</h3>
+                    <div class="comparison-value">0.05%</div>
+                    <p class="comparison-desc">Standard limit in most EU countries</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>UK (except Scotland)</h3>
+                    <div class="comparison-value">0.08%</div>
+                    <p class="comparison-desc">England, Wales & Northern Ireland limit</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Scotland</h3>
+                    <div class="comparison-value">0.05%</div>
+                    <p class="comparison-desc">Lower limit adopted in 2014</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Japan</h3>
+                    <div class="comparison-value">0.03%</div>
+                    <p class="comparison-desc">One of the strictest limits worldwide</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Zero Tolerance Countries</h3>
+                    <div class="comparison-value">0.00%</div>
+                    <p class="comparison-desc">Czech Republic, Slovakia, Hungary, Saudi Arabia</p>
+                </div>
+            </div>
+        </section>
+        
+		
+		<section class="bac-effects-section" id="legal-limits">
+			<h2 class="section-title"><i class="fas fa-gavel"></i> Legal Blood Alcohol Concentration (BAC) Limits</h2>
+			<p class="section-description">Blood Alcohol Concentration (BAC) limits vary significantly across different jurisdictions. The following tables detail the legal limits for driving under the influence (DUI) or driving while intoxicated (DWI) in the United States by state, and in countries around the world. These are legal thresholds; impairment can occur at lower levels.</p>
+
+			
+			<h3 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin: 2.5rem 0 1.5rem; color: var(--dark);"><i class="fas fa-flag-usa"></i> United States: BAC Limits by State</h3>
+			<p style="margin-bottom: 1.5rem; color: var(--gray);">In the United States, the legal limit for most drivers aged 21 and over is 0.08% . However, individual states have the authority to set stricter limits or rules for specific groups like commercial drivers, novice drivers, and those under 21.</p>
+
+			<div style="overflow-x: auto; margin-bottom: 3rem;">
+				<table class="bac-table">
+					<thead>
+						<tr>
+							<th>State / Jurisdiction</th>
+							<th>Standard BAC Limit (General Drivers)</th>
+							<th>Special Limits & Notable Laws</th>
+							<th>Key Penalties & Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Utah</strong></td>
+							<td><strong style="color: var(--danger);">0.05%</strong></td>
+							<td>First state to lower limit to 0.05% (2018). Judges can ban alcohol purchases for extreme DUI (0.16%+).</td>
+							<td>Considered the strictest state for DUI laws.</td>
+						</tr>
+						<tr>
+							<td><strong>All Other States (e.g., RI, AZ)</strong></td>
+							<td><strong>0.08%</strong></td>
+							<td>Under 21: 0.00% - 0.02% “Zero Tolerance”. Commercial Drivers: 0.04%.</td>
+							<td>In Arizona, drivers can be charged if “impaired to the slightest degree” even under 0.08%. In RI, 0.02%-0.08% for under 21 is “Driving While Impaired” (DWI).</td>
+						</tr>
+						<tr>
+							<td><strong>Washington (Proposed)</strong></td>
+							<td>0.08% (Current)</td>
+							<td>Bill passed Senate to lower limit to <strong>0.05%</strong>, effective July 2026 if enacted.</td>
+							<td>Bill SB 5067 aims to reduce traffic fatalities; opposition cites potential impact on moderate drinkers.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			
+			<h3 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin: 2.5rem 0 1.5rem; color: var(--dark);"><i class="fas fa-globe-americas"></i> International BAC Limits</h3>
+			<p style="margin-bottom: 1.5rem; color: var(--gray);">Globally, BAC limits range from zero-tolerance to 0.08%, with many countries implementing lower limits for novice, young, or professional drivers. Enforcement and penalties vary widely.</p>
+
+			<div style="overflow-x: auto;">
+				<table class="bac-table">
+					<thead>
+						<tr>
+							<th>Country / Region</th>
+							<th>Standard BAC Limit</th>
+							<th>Special Limits & Groups</th>
+							<th>Key Penalties & Context</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Czechia (Czech Republic)</strong></td>
+							<td><strong style="color: var(--danger);">0.00%</strong> (Zero Tolerance)</td>
+							<td>Applies to all drivers. Technical tolerance up to 0.024% may be allowed.</td>
+							<td>Random breath testing is mandatory. Refusal leads to heavy fines and a driving ban. Policy in place since 1953.</td>
+						</tr>
+						<tr>
+							<td><strong>Sweden, Norway</strong></td>
+							<td><strong>0.02%</strong> (De facto zero-tolerance)</td>
+							<td>Sweden: 0.02% for all drivers. Norway: 0.02%.</td>
+							<td>Penalties are severe, including income-based fines and imprisonment. Sweden has some of Europe's lowest drink-driving deaths.</td>
+						</tr>
+						<tr>
+							<td><strong>Poland</strong></td>
+							<td>0.02% (Criminal offense above 0.05%)</td>
+							<td>Two-tier system: 0.02‰-0.05‰ is a misdemeanor; above 0.05‰ is a criminal offense.</td>
+							<td>High BAC, repeat offenses, or causing an accident lead to aggravated charges, long driving bans, and vehicle forfeiture.</td>
+						</tr>
+						<tr>
+							<td><strong>United Kingdom</strong></td>
+							<td>0.08% (England, Wales, NI)</td>
+							<td>Scotland: 0.05%. Proposed to lower all UK to 0.05%. Novice/Bus drivers: Lower limits.</td>
+							<td>The UK government is consulting on lowering the limit for the first time since 1967 as part of a new road safety strategy.</td>
+						</tr>
+						<tr>
+							<td><strong>Germany, France, Spain, Australia</strong></td>
+							<td><strong>0.05%</strong></td>
+							<td><strong>Germany/France/Spain/Australia:</strong> Zero tolerance for novice, young (e.g., under 21), and professional drivers. <strong>Spain:</strong> Universal limit may drop to 0.02% in late 2025.</td>
+							<td>Penalties escalate with BAC level and repeat offenses. France treats some alcohol-related road deaths as “road homicide”.</td>
+						</tr>
+						<tr>
+							<td><strong>Japan</strong></td>
+							<td><strong>0.03%</strong></td>
+							<td>Extremely strict enforcement. Passengers and those who serve alcohol to a driver can also be penalized.</td>
+							<td>Penalties include heavy fines (up to ~1 million yen) and imprisonment (up to 5 years).</td>
+						</tr>
+						<tr>
+							<td><strong>South Africa</strong></td>
+							<td>0.05% (General), 0.02% (Professional)</td>
+							<td>Government announced plans in Jan 2026 to amend law to a <strong>zero-tolerance policy</strong>, scrapping the current legal limits.</td>
+							<td>Current law dates back ~30 years. The proposed change aims for a clear “no drinking and driving” policy.</td>
+						</tr>
+						<tr>
+							<td><strong>United Arab Emirates (UAE)</strong></td>
+							<td><strong style="color: var(--danger);">0.00%</strong> (Zero Tolerance)</td>
+							<td>Applies to all drivers.</td>
+							<td>Penalties are severe and can include jail time, hefty fines, and deportation for non-citizens.</td>
+						</tr>
+						<tr>
+							<td><strong>Countries with No Set BAC Limit</strong> (e.g., Kenya, Gambia, Barbados)</td>
+							<td>Not Specified</td>
+							<td>No prescribed BAC limit.</td>
+							<td>Drivers can still be prosecuted under general “dangerous driving” laws, but enforcement is often inconsistent.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="warning-box" style="margin-top: 2.5rem;">
+				<h3 class="warning-title"><i class="fas fa-exclamation-circle"></i> Important Legal Disclaimer</h3>
+				<p><strong>This information is for general reference and educational purposes only.</strong> Laws and penalties are subject to change and can vary by local jurisdiction. The enforcement and application of these laws depend on specific circumstances. This is not legal advice. For definitive legal guidance or if facing charges, you must consult with a qualified legal professional in the relevant jurisdiction.</p>
+			</div>
+		</section>
+
+
+        <!-- Standard Drinks Reference -->
+        <section class="bac-effects-section" id="drinks-reference">
+            <h2 class="section-title"><i class="fas fa-glass-cheers"></i> Standard Drinks Reference</h2>
+            
+            <p class="section-description">A "standard drink" contains approximately 14 grams (0.6 ounces) of pure alcohol. Different alcoholic beverages contain varying amounts of alcohol. Understanding standard drink equivalents helps you better estimate your BAC.</p>
+            
+            <div class="drinks-reference">
+                <div class="drink-card">
+                    <div class="drink-icon">
+                        <i class="fas fa-beer"></i>
+                    </div>
+                    <h3 class="drink-name">Regular Beer</h3>
+                    <p class="drink-details">12 oz (355 ml)<br>5% alcohol by volume</p>
+                    <div class="drink-alcohol">~14g pure alcohol</div>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--gray);">Raises BAC by ~0.02% for 160lb person</p>
+                </div>
+                
+                <div class="drink-card">
+                    <div class="drink-icon">
+                        <i class="fas fa-wine-glass"></i>
+                    </div>
+                    <h3 class="drink-name">Table Wine</h3>
+                    <p class="drink-details">5 oz (148 ml)<br>12% alcohol by volume</p>
+                    <div class="drink-alcohol">~14g pure alcohol</div>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--gray);">Raises BAC by ~0.02% for 160lb person</p>
+                </div>
+                
+                <div class="drink-card">
+                    <div class="drink-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h3 class="drink-name">Distilled Spirits</h3>
+                    <p class="drink-details">1.5 oz (44 ml)<br>40% alcohol by volume</p>
+                    <div class="drink-alcohol">~14g pure alcohol</div>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--gray);">Raises BAC by ~0.02% for 160lb person</p>
+                </div>
+                
+                <div class="drink-card">
+                    <div class="drink-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3 class="drink-name">Craft Beer (Strong)</h3>
+                    <p class="drink-details">8-9 oz (237-266 ml)<br>7-9% alcohol by volume</p>
+                    <div class="drink-alcohol">~14g pure alcohol</div>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--gray);">Equivalent to 1.5 regular beers</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h3 class="warning-title"><i class="fas fa-lightbulb"></i> Important Considerations</h3>
+                <p>Actual alcohol content can vary significantly between brands and serving sizes. Craft beers often have higher ABV than regular beers. Mixed drinks can contain multiple shots of liquor, making them equivalent to several standard drinks. Always check labels for accurate alcohol percentage information and remember that <a href="https://baclevelcalculator.com">BAC calculator</a>s provide estimates only.</p>
+            </div>
+        </section>
+        
+        <!-- Alcohol Metabolism Information -->
+        <section class="bac-effects-section">
+            <h2 class="section-title"><i class="fas fa-hourglass-half"></i> Alcohol Metabolism & Elimination</h2>
+            
+            <p class="section-description">Understanding how your body processes alcohol is crucial for interpreting BAC levels and estimating when you'll be sober. The liver metabolizes alcohol at a relatively constant rate that cannot be accelerated.</p>
+            
+            <div class="metabolism-info">
+                <div class="metabolism-card">
+                    <h3><i class="fas fa-clock"></i> Metabolism Rate</h3>
+                    <p>The liver metabolizes alcohol at an average rate of <strong>0.015% BAC per hour</strong>. This means it takes approximately <strong>one hour to metabolize one standard drink</strong>.</p>
+                    <p style="margin-top: 1rem;">For example, a BAC of 0.08% would take approximately <strong>5.5 hours to reach 0.00%</strong> (0.08 ÷ 0.015 = 5.33 hours).</p>
+                </div>
+                
+                <div class="metabolism-card">
+                    <h3><i class="fas fa-user-friends"></i> Individual Variations</h3>
+                    <p>Metabolism rate varies by individual. Factors that affect alcohol metabolism include:</p>
+                    <ul style="margin-top: 0.75rem; padding-left: 1.5rem;">
+                        <li>Liver health and function</li>
+                        <li>Age (metabolism slows with age)</li>
+                        <li>Genetic factors</li>
+                        <li>Medication use</li>
+                        <li>Food consumption</li>
+                        <li>Gender (women metabolize alcohol slower than men)</li>
+                    </ul>
+                </div>
+                
+                <div class="metabolism-card">
+                    <h3><i class="fas fa-times-circle"></i> What Doesn't Work</h3>
+                    <p>Common myths about sobering up quickly are not supported by science:</p>
+                    <ul style="margin-top: 0.75rem; padding-left: 1.5rem;">
+                        <li><strong>Coffee:</strong> Does not metabolize alcohol, just makes you an alert drunk</li>
+                        <li><strong>Cold showers:</strong> Does not accelerate liver function</li>
+                        <li><strong>Exercise:</strong> Does not increase alcohol metabolism rate</li>
+                        <li><strong>Eating food:</strong> Slows absorption but doesn't accelerate elimination</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1.5rem; background-color: rgba(37, 99, 235, 0.05); border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
+                <h4 style="font-family: 'Poppins', sans-serif; margin-bottom: 0.5rem; color: var(--primary);"><i class="fas fa-car"></i> Safe Driving Reminder</h4>
+                <p style="color: var(--gray);">Regardless of legal limits, the only safe BAC for driving is 0.00%. Even small amounts of alcohol can impair judgment, reaction time, and driving ability. When in doubt, don't drive. Always arrange for a designated driver or alternative transportation. Remember that many DUI arrests occur the morning after drinking when BAC may still be above legal limits.</p>
+            </div>
+        </section>
+        
+		<!-- ================= FAQ ================= -->
+		<section class="bac-effects-section" id="faq-section">
+			<h2 class="section-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions (FAQ) About BAC</h2>
+			<p class="section-description">Find quick answers to the most common questions about Blood Alcohol Concentration (BAC), its effects, legal implications, and safety.</p>
+
+			<div class="faq-container">
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is Blood Alcohol Content (BAC) Level?
+					</div>
+					<div class="faq-answer">
+						<p>Blood Alcohol Concentration (BAC) is a precise measurement of the amount of alcohol present in a person's bloodstream. It is expressed as a percentage by weight per unit volume. For example, a BAC of 0.08% means there are 0.08 grams of alcohol for every 100 milliliters of blood. It is the primary scientific and legal standard used worldwide to define alcohol impairment for activities like driving.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is the natural blood alcohol level?
+					</div>
+					<div class="faq-answer">
+						<p>“Natural blood alcohol level” typically refers to the blood alcohol concentration (BAC) in healthy individuals who have not consumed any alcoholic beverages or foods. This level is generally below 0.01 mg/dL (milligrams per deciliter), equivalent to 0.00001%. This naturally occurring blood alcohol content is extremely low, far below the detection threshold of standard breathalyzers (typically 0.02% BAC), and is considered “zero” in forensic or traffic testing.<br> 
+
+						The minute trace amounts of endogenous alcohol present in blood are primarily produced by fermentation from gut microbiota, human metabolism, or, in rare cases, abnormal fermentation within the intestines caused by certain diseases, leading to significant accumulation of alcohol within the body.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is the maximum blood alcohol level for driving?
+					</div>
+					<div class="faq-answer">
+						<p>In the United States, the legal maximum blood alcohol concentration (BAC) for drivers aged 21 and older is 0.08%. However, lower BAC limits apply in certain jurisdictions and for specific groups, such as: 0.05% in Utah, 0.04% for commercial drivers, and 0.01% to 0.02% for drivers under 21. Drivers may still be charged with driving under the influence even if their blood alcohol concentration is below these limits. </p>
+						
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is your blood alcohol level after one beer?
+					</div>
+					<div class="faq-answer">
+						<p>If you are a man weighing between 100-240 lbs, drinking one 12-ounce bottle of beer (5% ABV) will raise your blood alcohol concentration (BAC) to 0.019%-0.045%. It takes approximately 1.3-3 hours for your body to fully metabolize the alcohol from one bottle of beer.<br>
+
+							If you are a woman weighing 100-240 lbs, drinking one 12-ounce bottle of beer (5% ABV) will raise your blood alcohol concentration to 0.023%-0.056%. It will take 1.6-3.7 hours for your body to fully metabolize the alcohol from one bottle of beer.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is your blood alcohol level after one glass of wine?
+					</div>
+					<div class="faq-answer">
+						<p>Drinking one glass of wine (12% alcohol, 5 oz) is equivalent to drinking one 12-ounce glass of beer with 5% alcohol. Refer to the answer above for details.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How much blood alcohol level is one shot?
+					</div>
+					<div class="faq-answer">
+						<p>Drinking one shot of hard liquor (40% alcohol, 1.5 oz) is equivalent to drinking one 12-ounce beer with 5% alcohol content. Both share the same metabolism time and blood alcohol concentration. You can directly refer to the answer for one beer.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What are the tests used to determine your blood alcohol level?
+					</div>
+					<div class="faq-answer">
+						<p>Blood alcohol concentration (BAC) can be determined through breath, blood, urine, and saliva testing. Breathalyzers are the most commonly used method but not the most accurate. The most precise method involves drawing venous blood and analyzing its ethanol content. Other methods such as PEth testing (blood), saliva testing, and hair testing are less frequently used. While still prone to error, a self-testing method available when these instruments or conditions are unavailable is estimating alcohol concentration using a BAC calculator.<br>
+						<ol>
+
+							<li>Breathalyzer (Breath Test): Typically, drivers suspected of drunk driving are asked to exhale into a breathalyzer, which measures alcohol content in exhaled breath. This provides rapid results with relatively high accuracy.</li>
+							<li>Blood Testing: Analyzed using gas chromatography, enzymatic methods, or the dichromate method. It can measure blood alcohol concentration up to 12 hours after drinking.</li>
+							<li>Urine Testing (EtG/EtS): Detects alcohol consumption within the past 12-24 hours. For heavy drinkers, it can detect consumption up to 72 hours prior.</li>
+							<li>Saliva testing: Measures alcohol concentration in saliva, which correlates closely with blood alcohol levels.</li>
+							<li>Phosphatidylethanol (PEth) testing: This method can detect alcohol consumption from several weeks prior. <ol></p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How do police check blood alcohol level?
+					</div>
+					<div class="faq-answer">
+						<p>When we see police conducting DUI checks on TV, they typically use a breathalyzer device that drivers blow into to detect alcohol impairment. This breathalyzer is essentially a compact, handheld Preliminary Alcohol Screening (PAS) device, such as the Alco Sensor IV, which provides a rapid estimate of blood alcohol content. If the reading exceeds the legal limit, the driver is taken to the police station for an official confirmation test using a larger, more precise Evidential Breath Testing (EBT) device, like the Intoxilyzer 8000. This equipment provides printed results that serve as formal evidence in court, meeting stricter legal standards.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What color tube for blood alcohol level?
+					</div>
+					<div class="faq-answer">
+						<p><ol>
+						<li>Gray-cap tubes (preferred): Contain sodium fluoride (preservative) and potassium oxalate (anticoagulant) to prevent blood cell breakdown and alcohol consumption.</li>
+						<li>Red-cap tubes (standard or gel-type): Used for serum separation, typically as an alternative when gray caps are unavailable, but require immediate separation from cells for medical testing.</li>
+						<li>Lavender/Pink Cap Tubes (EDTA): Contain the anticoagulant EDTA and are accepted by certain laboratories, particularly routine chemistry/hematology labs.</li>
+						<li>Green Cap Tubes (Heparin): Used for plasma testing and occasionally for medical alcohol testing (STAT).</li></p>
+					</div>
+				</div>
+
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How fast does blood alcohol level drop per hour?
+					</div>
+					<div class="faq-answer">
+						<p>The average rate of decrease in blood alcohol concentration (BAC) is 0.015% per hour. The human body's rate of alcohol metabolism is relatively stable and is generally unaffected by other factors such as cold showers, coffee, exercise, or fresh air, which do not accelerate the metabolic process.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How long does it take for blood alcohol level to return to zero?
+					</div>
+					<div class="faq-answer">
+						<p>The human body typically requires approximately 1.3 to 3.7 hours to metabolize one standard drink (12 ounces of beer, 5 ounces of wine, or 1.5 ounces of spirits). If blood alcohol concentration reaches 0.08% after drinking, it takes over 5 hours to reduce it back to 0.00%.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What makes your blood alcohol level go up？?
+					</div>
+					<div class="faq-answer">
+						<p>The blood alcohol concentration (BAC) in a healthy human body is extremely low, almost negligible. However, when you consume alcohol or alcohol-containing foods too quickly—exceeding the liver's ability to metabolize it—the BAC gradually rises. Several factors influence blood alcohol concentration:
+						<ol>
+						<li>Rate of consumption: Rapid drinking, gulping, binge drinking, or consuming large quantities of alcoholic foods can overload the liver, leading to rapid alcohol accumulation.</li>
+						<li>Consumption rate: The more alcohol you drink and the faster you consume it, the higher your BAC will be, as the liver can metabolize approximately one alcoholic drink per hour.</li>
+						<li>Empty stomach: Food slows alcohol absorption; on an empty stomach, alcohol enters the bloodstream more rapidly.</li>
+						</ol>
+</p>
+					</div>
+				</div>
+
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How can you keep your blood alcohol level from rising too quickly?
+					</div>
+					<div class="faq-answer">
+						<p>Since the liver's rate of alcohol metabolism is relatively stable, it is recommended to slow down alcohol intake by eating before and after drinking. Additionally, alternating alcoholic beverages with water during drinking helps maintain adequate hydration and prevents rapid increases in blood alcohol concentration. Remember to control your drinking pace—avoid drinking too quickly, otherwise BAC will still rise rapidly.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What blood alcohol level is judgement impaired?
+					</div>
+					<div class="faq-answer">
+						<p>After drinking, your blood alcohol concentration (BAC) begins to impair your judgment when it reaches 0.02%. As you consume more alcohol, this concentration rises. At around 0.05%, more pronounced impairment and reduced inhibitions typically occur. In many countries and regions, 0.08% is the legal threshold for impaired driving (DUI/DWI). Reaching 0.10%–0.12% leads to noticeable lack of coordination, impaired judgment and memory, and difficulty with motor skills.</p>
+					</div>
+				</div>
+
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How high of a blood alcohol level is dangerous?
+					</div>
+					<div class="faq-answer">
+						<p>When your BAC reaches 0.15 to 0.30 g%, your life is at high risk. Potential symptoms include difficulty breathing, inability to walk independently, loss of bladder control, and even unconsciousness.<br>
+
+						Some friends who enjoy drinking may also frequently ask, “What blood alcohol level causes death?” or “What blood alcohol level leads to blackout?” A lethal blood alcohol level is a BAC exceeding 0.30 g%, which makes it extremely likely for a person to lose consciousness, fall into a coma, or even die.</p>
+					</div>
+				</div>
+
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> How much blood alcohol level is alcohol poisoning?
+					</div>
+					<div class="faq-answer">
+						<p>When blood alcohol concentration (BAC) reaches 0.30% to 0.40%, the body is highly likely to be in a state of alcohol intoxication. This condition is extremely dangerous, often leading to loss of consciousness and posing a life-threatening risk. When BAC exceeds 0.40%, the mortality rate becomes extremely high.
+						</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<i class="fas fa-question-circle"></i> What is the highest blood alcohol level ever recorded?
+					</div>
+					<div class="faq-answer">
+						<p>The highest recorded blood alcohol concentration (BAC) among documented survivors was 1.374% (13.74 g/L). This was a 40-year-old Polish man discovered in July 2013 in a state of alcohol poisoning, unconscious. Fortunately, he ultimately survived.<br>
+
+							An even higher record exists: a 28-year-old Polish man discovered with a BAC of 1.480% (14.8 g/L). However, he died from injuries sustained in a car accident, not alcohol poisoning. This further underscores that countless accidents occur annually due to drunk driving. For your safety and the safety of others, never drink and drive. Stay safe.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+        
+        <!-- Final Disclaimer -->
+        <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: rgba(239, 68, 68, 0.05); border-left: 4px solid var(--danger); border-radius: 0 8px 8px 0;">
+            <h3 style="font-family: 'Poppins', sans-serif; margin-bottom: 0.75rem; color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Important Medical & Legal Disclaimer</h3>
+            <p style="color: var(--gray);">This blood alcohol level chart is for educational and informational purposes only. It should not be used to determine if you are safe to drive or make decisions about alcohol consumption. Individual responses to alcohol vary significantly. The only safe BAC for driving is 0.00%. This information is not medical advice. If you or someone you know is experiencing alcohol poisoning symptoms (confusion, vomiting, seizures, slow breathing, unconsciousness), seek emergency medical attention immediately. Always drink responsibly and never drink and drive.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BAC Calculator</h4>
+                    <p>A free educational resource for understanding blood alcohol concentration. Empowering informed decisions about alcohol consumption and driving safety.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://baclevelcalculator.com">Home - BAC Calculator</a></li>
+                        <li><a href="#main-chart">BAC Level Chart</a></li>
+                        <li><a href="#effects-table">BAC Effects Table</a></li>
+                        <li><a href="#gender-charts">Gender Comparison Charts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.niaaa.nih.gov">National Institute on Alcohol Abuse</a></li>
+                        <li><a href="https://www.cdc.gov/alcohol/about-alcohol-use/index.html">CDC Alcohol Guidelines</a></li>
+                        <li><a href="https://www.nhtsa.gov/risky-driving/drunk-driving">NHTSA Drunk Driving Facts</a></li>
+                        <li><a href="https://www.samhsa.gov/find-help/national-helpline">SAMHSA National Helpline</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 BAC Calculator. This blood alcohol level chart is for educational purposes only. Always drink responsibly and never drink and drive.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 
+            generateGenderBACTables();
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's just "#"
+                    if (href === '#') return;
+                    
+                    const targetElement = document.querySelector(href);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add interactive highlight to table rows
+            const tableRows = document.querySelectorAll('.bac-table tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(37, 99, 235, 0.05)';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    // Reset to original background based on class
+                    if (this.classList.contains('bac-level-0')) {
+                        this.style.backgroundColor = 'rgba(16, 185, 129, 0.05)';
+                    } else if (this.classList.contains('bac-level-1')) {
+                        this.style.backgroundColor = 'rgba(245, 158, 11, 0.05)';
+                    } else if (this.classList.contains('bac-level-2')) {
+                        this.style.backgroundColor = 'rgba(249, 115, 22, 0.05)';
+                    } else if (this.classList.contains('bac-level-3')) {
+                        this.style.backgroundColor = 'rgba(239, 68, 68, 0.05)';
+                    } else if (this.classList.contains('bac-level-4')) {
+                        this.style.backgroundColor = 'rgba(220, 38, 38, 0.05)';
+                    } else {
+                        this.style.backgroundColor = '';
+                    }
+                });
+            });
+            
+            // Add click to copy BAC level functionality
+            const bacLevelCells = document.querySelectorAll('.bac-level-cell');
+            bacLevelCells.forEach(cell => {
+                cell.style.cursor = 'pointer';
+                cell.title = 'Click to copy BAC level';
+                
+                cell.addEventListener('click', function() {
+                    const bacLevel = this.textContent;
+                    navigator.clipboard.writeText(bacLevel).then(() => {
+                        // Show copied message
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        this.style.color = 'var(--primary)';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.color = '';
+                        }, 1000);
+                    });
+                });
+            });
+            
+            // Add print functionality button
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '<i class="fas fa-print"></i> Print This Chart';
+            printButton.style.cssText = `
+                display: block;
+                margin: 2rem auto 0;
+                padding: 0.75rem 1.5rem;
+                background-color: var(--primary);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            `;
+            
+            printButton.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'var(--primary-dark)';
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            printButton.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'var(--primary)';
+                this.style.transform = 'translateY(0)';
+            });
+            
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+            
+            // Insert print button after main chart
+            const mainChart = document.querySelector('.main-chart-container');
+            if (mainChart) {
+                mainChart.appendChild(printButton);
+            }
+            
+            // 
+            document.addEventListener('mouseover', function(e) {
+                const cell = e.target;
+                if (cell.tagName === 'TD' && cell.classList.contains('bac-value-cell')) {
+                    const bacValue = parseFloat(cell.textContent);
+                    const effect = getEffectFromBAC(bacValue);
+                    cell.title = `BAC: ${bacValue}% - ${effect}`;
+                }
+            });
+        });
+        
+        // 
+        function getEffectFromBAC(bac) {
+            if (bac < 0.04) return 'Minimal impairment';
+            if (bac < 0.07) return 'Mild impairment';
+            if (bac < 0.10) return 'Significant impairment (illegal to drive)';
+            if (bac < 0.21) return 'Severe impairment';
+            return 'Dangerous levels (risk of alcohol poisoning)';
+        }
+        
+        // 
+        function getBACClass(bac) {
+            if (bac < 0.02) return 'bac-0';
+            if (bac < 0.04) return 'bac-1';
+            if (bac < 0.06) return 'bac-2';
+            if (bac < 0.08) return 'bac-3';
+            if (bac < 0.10) return 'bac-4';
+            if (bac < 0.15) return 'bac-5';
+            if (bac < 0.20) return 'bac-6';
+            if (bac < 0.25) return 'bac-7';
+            if (bac < 0.30) return 'bac-8';
+            if (bac < 0.35) return 'bac-9';
+            return 'bac-10';
+        }
+        
+        // 
+        function calculateBAC(drinks, weightLbs, isMale) {
+            // 
+            const alcoholGrams = drinks * 14;
+            
+            // 
+            const weightGrams = weightLbs * 453.592;
+            
+            // 
+            const r = isMale ? 0.68 : 0.55;
+            
+            // 
+            const bac = (alcoholGrams / (weightGrams * r)) * 100;
+            
+            return bac;
+        }
+        
+        // 
+        function generateGenderBACTables() {
+            const maleTableBody = document.getElementById('male-bac-table-body');
+            const femaleTableBody = document.getElementById('female-bac-table-body');
+            
+            // 
+            const weights = [100, 120, 140, 160, 180, 200, 220, 240];
+            
+            // 
+            const drinkCounts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            
+            // 
+            weights.forEach(weight => {
+                const row = document.createElement('tr');
+                
+                // 
+                const weightCell = document.createElement('td');
+                weightCell.textContent = weight;
+                weightCell.style.fontWeight = '600';
+                row.appendChild(weightCell);
+                
+                // 
+                drinkCounts.forEach(drinks => {
+                    const bac = calculateBAC(drinks, weight, true); // 
+                    const bacCell = document.createElement('td');
+                    bacCell.textContent = bac.toFixed(2);
+                    bacCell.classList.add('bac-value-cell', getBACClass(bac));
+                    row.appendChild(bacCell);
+                });
+                
+                maleTableBody.appendChild(row);
+            });
+            
+            // 
+            weights.forEach(weight => {
+                const row = document.createElement('tr');
+                
+                // 
+                const weightCell = document.createElement('td');
+                weightCell.textContent = weight;
+                weightCell.style.fontWeight = '600';
+                row.appendChild(weightCell);
+                
+                // 
+                drinkCounts.forEach(drinks => {
+                    const bac = calculateBAC(drinks, weight, false); // 
+                    const bacCell = document.createElement('td');
+                    bacCell.textContent = bac.toFixed(2);
+                    bacCell.classList.add('bac-value-cell', getBACClass(bac));
+                    row.appendChild(bacCell);
+                });
+                
+                femaleTableBody.appendChild(row);
+            });
+        }
+
+
+    </script>
+</body>
+</html>
